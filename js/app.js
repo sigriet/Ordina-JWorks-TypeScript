@@ -1,11 +1,9 @@
-function publishItems(title, genre, description) {
-    var article = document.createElement("article");
-    article.innerHTML =
-        "<h3>" + title + "</h3>" +
-            "<p>" + genre + "</p>" +
-            "<span>" + description + "</span>";
-    document.getElementById("items").appendChild(article);
-}
-publishItems("Matrix", "Thriller", "Did you know, Neo is the one?");
-publishItems("Moby Dick", "Drama", "Is this fish for real?");
+var library = new Library();
+library.render(document.getElementById("items"));
+/*
+let book : Book = new Book("The hitchhiker's guide to the galaxy","Sci fi",
+    "So lang and thanks for the fish", new Author("Douglas Adams"));
+
+book.render(document.getElementById("items"));
+*/ 
 //# sourceMappingURL=app.js.map

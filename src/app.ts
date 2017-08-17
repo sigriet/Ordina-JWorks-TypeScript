@@ -1,16 +1,9 @@
-function publishItems(title:string,genre:string,description:string) : void {
+let library: Library = new Library();
+library.render(document.getElementById("items"));
 
-    let article: HTMLElement = document.createElement("article")
-    article.innerHTML =
-        "<h3>" + title + "</h3>" +
-        "<p>" + genre + "</p>" +
-        "<span>" + description + "</span>";
+/*
+let book : Book = new Book("The hitchhiker's guide to the galaxy","Sci fi",
+    "So lang and thanks for the fish", new Author("Douglas Adams"));
 
-
-    document.getElementById("items").appendChild(article);
-
-}
-
-publishItems("Matrix","Thriller","Did you know, Neo is the one?");
-
-publishItems("Moby Dick","Drama","Is this fish for real?");
+book.render(document.getElementById("items"));
+*/
