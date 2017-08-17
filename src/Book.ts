@@ -5,6 +5,7 @@ class Book extends Item {
         super(title,genre,description)
         this.author = author;
     }
+
     render(element: HTMLElement):void {
         let article: HTMLElement = document.createElement("article");
         article.innerHTML =
@@ -14,5 +15,9 @@ class Book extends Item {
             "<span>" + this.description + "</span>";
 
         element.appendChild(article);
+    }
+
+    static fromJSON(input: any): Book {
+        return new Book(input.title, new Author(input.author), input.genre, input.description);
     }
 }
